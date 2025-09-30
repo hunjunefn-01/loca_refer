@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+<style>
+  body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 18px;
+    line-height: 1.75;
+    margin: 0;
+    padding: 20px;
+    color: #222;
+  }
+
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    flex-wrap: wrap;
+  }
+
+  .tab {
+    padding: 14px 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-weight: bold;
+    color: #666;
+    font-size: 17px;
+  }
+
+  .tab.active {
+    color: blue;
+    border-bottom: 2px solid blue;
+  }
+
+  iframe, #originalReport {
+    width: 100%;
+    height: 80vh;
+    border: none;
+    margin-top: 20px;
+    display: none;
+  }
+
+  .visible {
+    display: block !important;
+  }
+
+  .info {
+    font-size: 16px;
+    margin-top: 12px;
+    color: #444;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-top: 0;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 600px) {
+    body {
+      font-size: 19px;
+    }
+
+    .tab {
+      font-size: 18px;
+      padding: 12px 16px;
+    }
+
+    .info {
+      font-size: 17px;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 17.5px;
+    }
+  }
+</style>
+
+<div class="tabs">
+  <button class="tab active" onclick="changeTab('summary')">리포트 요약</button>
+  <button class="tab" onclick="changeTab('original')">리포트 원문</button>
+</div>
+
+<!-- iframe: 원문 -->
+<iframe id="reportIframe"></iframe>
+
+<!-- 직접 입력된 요약 -->
+<div id="originalReport" class="visible">
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KT&G 리포트</title>
+  <style>
+    body {
+      font-family: 'Helvetica', 'Arial', sans-serif;
+      margin: 0;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+      padding: 1.2rem;
+    }
+    .card h2 {
+      font-size: 1.2rem;
+      color: #1a1a1a;
+      margin-top: 0;
+    }
+    .highlight {
+      background-color: #f0f8ff;
+      padding: 0.5rem;
+      border-left: 4px solid #007acc;
+      margin: 1rem 0;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>배당과 글로벌 확장, KT&G의 성장 비밀이 숨어 있다!</h2>
+    <p style="color: gray; margin-top: -0.5rem; margin-bottom: 2rem;">
+      이것부터 알고 가기
+    </p>
+    <p>KT&G는 국내외 담배 시장에서 꾸준한 성장과 배당 정책을 통해 안정적인 수익을 제공하는 기업입니다. 해외 시장 확대와 신제품 개발에 집중하며, 앞으로의 성장 동력을 갖추고 있습니다. 이 자료는 KT&G의 실적 전망과 전략적 성장 방향을 이해하는 데 도움을 줄 거예요.</p>
+  </div>
+
+  <div class="card">
+    <h2>중요한 부분</h2>
+    <ul>
+      <li><strong>① 해외 시장의 성장과 구조적 변화:</strong> KT&G는 해외 궐련시장에서 높은 성장률을 기록하며, 신규 공장 가동과 지역별 시장 확대를 통해 해외 매출 비중이 국내를 넘어설 전망입니다. 특히 인도네시아와 CIS 지역에서 시장 지배력을 키우고 있어 글로벌 경쟁력을 갖추고 있어요.</li>
+      <li><strong>② 신제품과 새로운 성장 동력:</strong> NGP(비 궐련 제품)와 Modern Product(전자담배 등) 사업에 대한 기대가 커지고 있어요. 이번에 출시될 신 디바이스와 니코틴 Pouch 제품은 성장의 새로운 기회가 될 것으로 보여집니다. 이는 지속적인 수익 구조 변화를 이끄는 핵심 전략입니다.</li>
+      <li><strong>③ 장기적인 배당 정책과 주주환원:</strong> KT&G는 꾸준한 배당금 지급과 자사주 매입으로 주주에 대한 배려를 보여주고 있어요. 향후 몇 년간 총 주주환원율이 높아질 것으로 예상되며, 안정적이면서도 성장하는 기업 가치에 투자할 만한 포인트입니다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>쉽게 말해서</h2>
+    <div class="highlight">
+      <strong>① 이 리포트가 말하려고 하는 건:</strong><br>
+      KT&G는 국내 담배 시장의 성장은 한계에 다다랐지만, 해외 시장 확장과 신제품 개발을 통해 성장의 길을 열고 있음을 보여줍니다. 또한, 좋은 배당 정책으로 투자자에게 꾸준한 수익을 제공하고 있다는 점이 핵심입니다.
+    </div>
+    <div class="highlight">
+      <strong>② 배울 수 있는 것은:</strong><br>
+      이 기업은 해외 시장에서의 기회와 신기술 도입이 어떻게 시장 점유율과 수익성을 높이는지 보여줍니다. 성장과 배당을 동시에 추구하는 전략이 어떤 효과를 가져오는지 이해할 수 있습니다.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>그럼 무엇을 해야 할까</h2>
+    <ul>
+      <li><strong>① 이 내용을 더 심도 있게 알고 싶다면:</strong> KT&G의 해외 시장 전략, 글로벌 담배 산업 동향, 신제품 및 신기술 개발 사례를 자세히 공부하는 것이 도움이 됩니다. 특히, 글로벌 시장에서의 경쟁력 확보 방식을 심도 있게 살펴보면 좋겠습니다.</li>
+      <li><strong>② 이 내용을 바탕으로 이익을 얻으려면:</strong> KT&G의 해외 시장 확대와 신제품 출시에 주목하며, 장기 배당 정책과 주가 상승 가능성을 고려해 투자를 검토하는 것이 좋겠습니다. 또한, 꾸준히 시장 동향과 KT&G의 실적을 모니터링 하여 적절한 시기에 대응하는 전략이 필요해요.</li>
+    </ul>
+  </div>
+
+</body>
+</html>
+
+
+</div>
+
+<!-- 정보 출력 -->
+<div class="info" id="urlInfo"></div>
+
+<script>
+  // 탭 전환
+  function changeTab(tab) {
+    document.querySelectorAll('.tab').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('iframe, #originalReport').forEach(el => el.classList.remove('visible'));
+
+    if (tab === 'summary') {
+      document.querySelector('.tab:nth-child(1)').classList.add('active');
+      document.getElementById('originalReport').classList.add('visible');
+    } else {
+      document.querySelector('.tab:nth-child(2)').classList.add('active');
+      document.getElementById('reportIframe').classList.add('visible');
+    }
+  }
+
+  // 현재 주소에서 en 값과 파일명 추출
+  const urlParams = new URLSearchParams(window.location.search);
+  const en = urlParams.get('en') || '';
+
+
+  const path = window.location.pathname.split('/').pop(); // 예: 253_12459975_v.html
+  const filenameWithV = path.replace('.html', '');
+  const filename = filenameWithV.replace('_v', '');
+
+  const iframeURL = `https://mofit.fnguide.com/lssec/report/${filename}?cn=ls&en=${en}`;
+  document.getElementById('reportIframe').src = iframeURL;
+</script>
+
+</body>
+</html>
